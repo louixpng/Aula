@@ -2,14 +2,15 @@ package com.example.aula;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class TelaInicial extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +24,15 @@ public class MainActivity extends AppCompatActivity {
         Button somar = (Button) findViewById(R.id.inc);
         Button subtrair = (Button) findViewById(R.id.dec);
         Button toast = (Button) findViewById(R.id.toast);
+        Intent i = new Intent(Intent.ACTION_DIAL);
 
         TextView texto = (TextView) findViewById(R.id.texto);
 
         toast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Qual é o preço do medo abundante de todas as verdades?", Toast.LENGTH_LONG).show();
+                i.setData(Uri.parse("tel:1143252424"));
+                startActivity(i);
             }
         });
 
