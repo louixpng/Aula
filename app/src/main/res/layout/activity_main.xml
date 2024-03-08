@@ -21,16 +21,16 @@
         app:layout_constraintVertical_bias="0.484" />
 
     <Button
-        android:id="@+id/toast"
+        android:id="@+id/telefone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Toast"
+        android:text="Telefone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/inc"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/texto"
-        app:layout_constraintVertical_bias="0.755" />
+        app:layout_constraintVertical_bias="0.741" />
 
     <Button
         android:id="@+id/inc"
@@ -50,11 +50,35 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="76dp"
         android:text="Subtrair"
-        app:layout_constraintBottom_toTopOf="@+id/toast"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toEndOf="@+id/inc"
         app:layout_constraintTop_toBottomOf="@+id/texto"
-        app:layout_constraintVertical_bias="0.595" />
+        app:layout_constraintVertical_bias="0.356" />
+
+    <Button
+        android:id="@+id/alarmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarm"
+        app:layout_constraintBottom_toTopOf="@+id/texto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.503" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        app:layout_constraintBottom_toTopOf="@+id/alarmButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.168" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

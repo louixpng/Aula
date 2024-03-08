@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.AlarmClock;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 public class TelaInicial extends AppCompatActivity {
 
@@ -23,12 +26,19 @@ public class TelaInicial extends AppCompatActivity {
     private void botoes(){
         Button somar = (Button) findViewById(R.id.inc);
         Button subtrair = (Button) findViewById(R.id.dec);
-        Button toast = (Button) findViewById(R.id.toast);
-        Intent i = new Intent(Intent.ACTION_DIAL);
+        Button telefone = (Button) findViewById(R.id.telefone);
+        Button alarm = (Button) findViewById(R.id.alarmButton);
+        Button voltar = (Button) findViewById(R.id.backButton);
 
+        Intent i = new Intent(Intent.ACTION_DIAL);
+        Intent i2 = new Intent(AlarmClock.ACTION_SET_ALARM)
+                .putExtra(AlarmClock.EXTRA_DAYS, Calendar.SATURDAY)
+                .putExtra(AlarmClock.EXTRA_HOUR, 20)
+                .putExtra(AlarmClock.EXTRA_MINUTES, 30);
+        Intent i3 = new Intent(this, TelaLogin.class);
         TextView texto = (TextView) findViewById(R.id.texto);
 
-        toast.setOnClickListener(new View.OnClickListener() {
+        telefone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 i.setData(Uri.parse("tel:1143252424"));
@@ -55,5 +65,21 @@ public class TelaInicial extends AppCompatActivity {
                 texto.setText(String.valueOf(result));
             }
         });
+
+        alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(i2);
+            }
+        });
+
+        voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(i3);
+            }
+        });
+
+
     }
 }
