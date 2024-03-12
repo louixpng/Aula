@@ -20,7 +20,7 @@ public class TelaLogin extends AppCompatActivity {
 
     private void btnSignIn(){
         Button loginBtn = (Button) findViewById(R.id.loginBtn);
-        Intent intent = new Intent(this, TelaInicial.class);
+        Intent intent = new Intent(this, TelaMain.class);
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override

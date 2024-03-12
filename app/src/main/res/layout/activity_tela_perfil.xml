@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEB3B"
+    tools:context=".TelaPerfil">
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="301dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="224dp"
+        android:backgroundTint="#9C27B0"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Nome"
+        android:textColor="#779C27B0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="301dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#9C27B0"
+        android:ems="10"
+        android:inputType="text"
+        android:text="E-mail"
+        android:textColor="#779C27B0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+    <Button
+        android:id="@+id/confirmar"
+        android:layout_width="301dp"
+        android:layout_height="64dp"
+        android:backgroundTint="#00FFFFFF"
+        android:text="Confirmar"
+        android:textColor="#9C27B0"
+        android:textSize="16sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.819"
+        app:strokeColor="#9C27B0"
+        app:strokeWidth="1.5dp" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="301dp"
+        android:layout_height="44dp"
+        android:backgroundTint="#9C27B0"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Telefone"
+        android:textColor="#779C27B0"
+        android:textColorHint="#779C27B0"
+        app:layout_constraintBottom_toTopOf="@+id/confirmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+        app:layout_constraintVertical_bias="0.067" />
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="118dp"
+        android:layout_height="110dp"
+        android:src="@mipmap/jotaro_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.078" />
+</androidx.constraintlayout.widget.ConstraintLayout>
